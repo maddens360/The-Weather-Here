@@ -40,8 +40,8 @@ app.get('/weather/:latlon', async (request, response) => {
     const lat = latlon[0];
     const lon = latlon[1];
     console.log(lat,lon);
-    const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.API_KEY}`;
-    // const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0135e9107fa891b30d427d8bb3157b2f`;
+    // const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.API_KEY}`;
+    const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0135e9107fa891b30d427d8bb3157b2f`;
     const fetch_weather = await fetch(weather_url);
     const json_weather = await fetch_weather.json();
 
